@@ -1,1 +1,291 @@
-/* Add your CSS here */
+/* Page background and default text color */
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	background: #070b16;
+	color: #f0f6ff;
+}
+
+/* Horizontal line - light blue */
+hr {
+	border: none;
+	border-top: 3px solid #4a7ebd;
+	margin: 20px 0;
+}
+
+/* Header - Intel branded gradient */
+header {
+	background: linear-gradient(180deg, #002746 0%, #154070 100%);
+	color: #fff;
+}
+
+/* Main container - centered with max width */
+header div {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px;
+}
+
+/* Resize the header logo image */
+header img {
+	max-width: 150px;
+	height: auto;
+	display: block;
+	margin: 0 auto 20px;
+}
+
+/* Header typography */
+header h1 {
+	font-size: 2rem;
+	line-height: 1.15;
+	margin: 0.2rem 0 0.6rem;
+	font-weight: 700;
+	color: #f1faff;
+}
+
+header p {
+	max-width: 720px;
+	margin: 0 auto;
+	color: rgba(240, 246, 255, 0.9);
+	font-size: 1rem;
+}
+
+
+.timeline {
+  position: relative;
+  max-width: 880px;
+  margin: 40px auto;
+  background: #0f1a2e;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #425883;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+.card{
+  padding: 10px 20px;
+  position: relative;
+  width: 45%;
+  background: #13223f;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  color: #e9f4ff;
+}
+.textbox{
+  padding: 15px 20px;
+  background-size: cover;
+  position: relative;
+  border-radius: 6px;
+  font-size: 16px;
+  
+
+}
+
+.card:hover .textbox h3,
+.card:hover .textbox small,
+.card:hover .textbox p {
+  opacity: 1;
+  
+}
+.textbox h3 {
+	margin-top: 0;
+  margin-bottom: 6px;
+	color: #d7e7ff;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.textbox small {
+	display: block;
+	margin-bottom: 15px;
+	color: #8fb7e8;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.textbox p {
+	margin: 0;
+	line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.buttRight {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  right: -20px;
+  z-index: 10;
+  background: #425883;
+}
+.buttLeft {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  left: -20px;
+  z-index: 10;
+  background: #425883;
+}
+
+.card1{
+  background-image:  linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)),  url("Intel Images/1.jpg");
+}
+
+.card2{
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url("Intel Images/2.jpg");
+}
+.card3{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("Intel Images/3.jpg");
+}
+
+.card4{
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url("Intel Images/4.jpg");
+}
+.card5{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("Intel Images/5.jpg");
+}
+
+.card6{
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url("Intel Images/6.jpg");
+}
+.card7{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("Intel Images/7.jpg");
+}
+
+.card8{
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url("Intel Images/8.jpg");
+}
+
+.card9{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("Intel Images/9.jpg");
+}
+
+
+
+
+
+@media (min-width: 900px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 380px);
+    grid-template-rows: 1fr 30px 1fr;
+    column-gap: 100px;
+
+    align-items: center;
+    
+    overflow-x: auto;
+    padding: 40px 120px;
+    min-height: 500px;
+    position: relative;
+  }
+
+  /* Horizontal timeline line */
+  .timeline::after { 
+    width: 205%; 
+    height: 4px; 
+    top: 50%; 
+    left: 0px; 
+    bottom: auto; 
+    margin-left: 0; 
+    
+  }
+
+  .card {
+    width: 280px;
+    position: relative;
+    margin: 0;
+    z-index: 2;
+
+  }
+
+  /* Top row cards */
+  .left-card {
+    grid-row: 1;
+    align-self: end;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  /* Bottom row cards */
+  .right-card {
+    grid-row: 3;
+    align-self: start;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .textbox {
+    min-height: 220px;
+    
+  }
+
+  
+  .card .buttRight {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 100%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    right: 140px;
+    z-index: 10;
+    background: #425883;
+  }
+  .card .buttLeft {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    left: 140px;
+    z-index: 10;
+    background: #425883;
+  }
+    
+  .timeline {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(106, 151, 206, 0.8) transparent;
+  }
+  .timeline::-webkit-scrollbar {
+    height: 8px;
+  }
+  .timeline::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .timeline::-webkit-scrollbar-thumb {
+    background: rgba(106, 151, 206, 0.8);
+    border-radius: 880px;
+  }
+}
+
+
+/* Bottom paragraph styling */
+p {
+	text-align: center;
+	margin: 40px auto 24px;
+	color: rgba(240, 246, 255, 0.82);
+}
+.left-card{
+  left: -25.5%;
+}
+.right-card {
+  left: 25.5%;
+}
